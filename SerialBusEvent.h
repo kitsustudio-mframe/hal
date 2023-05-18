@@ -12,11 +12,11 @@
  */  
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/package-info.h"
+#include "lang/package-info.h"
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/Interface.h"
-#include "../lang/ByteBuffer.h"
+#include "lang/Interface.h"
+#include "lang/ByteBuffer.h"
 
 //-----------------------------------------------------------------------------------------
 #include "./SerialBusStatus.h"

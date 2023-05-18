@@ -12,7 +12,7 @@
  */  
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/ByteBuffer.h"
+#include "lang/ByteBuffer.h"
 
 //-----------------------------------------------------------------------------------------
 #include "./Base.h"
@@ -43,28 +43,28 @@ struct hal::FlashStorage :public hal::Base{
    * 
    * @param address 
    */
-  virtual void setAddress(uint32_t address) = 0;
+  virtual void setAddress(uint32_t address) abstract;
 
   /**
    * @brief Get the Address object
    * 
    * @return uint32_t 
    */
-  virtual uint32_t getAddress(void) = 0;
+  virtual uint32_t getAddress(void) abstract;
 
   /**
    * @brief 
    * 
    * @return uint32_t 
    */
-  virtual uint32_t getFlashSize(void) = 0;
+  virtual uint32_t getFlashSize(void) abstract;
 
   /**
    * @brief 
    * 
    * @return uint32_t 
    */
-  virtual uint32_t getPageSize(void) = 0;
+  virtual uint32_t getPageSize(void) abstract;
 
   /**
    * @brief 
@@ -73,14 +73,14 @@ struct hal::FlashStorage :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool pageErase(uint32_t pageNumber) = 0;
+  virtual bool pageErase(uint32_t pageNumber) abstract;
 
   /**
    * @brief 
    * 
    * @return uint32_t 
    */
-  virtual uint32_t getSectorSize(void) = 0;
+  virtual uint32_t getSectorSize(void) abstract;
 
   /**
    * @brief 
@@ -89,7 +89,7 @@ struct hal::FlashStorage :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool sectorErase(uint32_t sectorNumber) = 0;
+  virtual bool sectorErase(uint32_t sectorNumber) abstract;
 
   /**
    * @brief flash寫入
@@ -99,7 +99,7 @@ struct hal::FlashStorage :public hal::Base{
    * @return true 設定寫入成功
    * @return false 設定寫入失敗，可能設備正在忙碌中
    */
-  virtual bool write(lang::ByteBuffer& bytebuffer, hal::FlashStorageEvent* event) = 0;
+  virtual bool write(lang::ByteBuffer& bytebuffer, hal::FlashStorageEvent* event) abstract;
 
   /**
    * @brief flash讀取
@@ -109,7 +109,7 @@ struct hal::FlashStorage :public hal::Base{
    * @return true 設定讀取成功
    * @return false 設定讀取失敗，設備可能正在忙碌中
    */
-  virtual bool read(lang::ByteBuffer& bytebuffer, hal::FlashStorageEvent* event) = 0;
+  virtual bool read(lang::ByteBuffer& bytebuffer, hal::FlashStorageEvent* event) abstract;
 };
 
 /* *****************************************************************************************

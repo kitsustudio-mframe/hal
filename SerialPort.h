@@ -12,11 +12,11 @@
  */  
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/package-info.h"
+#include "lang/package-info.h"
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/InputStreamBuffer.h"
-#include "../lang/OutputStream.h"
+#include "lang/InputStreamBuffer.h"
+#include "lang/OutputStream.h"
 
 //-----------------------------------------------------------------------------------------
 #include "./Base.h"

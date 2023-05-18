@@ -12,8 +12,7 @@
  */
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/package-info.h"
-#include "../lang/ByteBuffer.h"
+#include "lang/ByteBuffer.h"
 
 //-----------------------------------------------------------------------------------------
 #include "./SerialPeriphMode.h"
@@ -98,7 +97,7 @@ struct hal::SerialPeriph :public hal::Base{
   virtual lang::ByteBuffer* setWriteBuffer(lang::ByteBuffer* byteBuffer) = 0;
 
   /* **************************************************************************************
-   * Method Get/Set
+   * Method 
    */
 
   /**

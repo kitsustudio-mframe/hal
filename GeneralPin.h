@@ -12,7 +12,7 @@
  */  
 
 //-----------------------------------------------------------------------------------------
-#include "../lang/package-info.h"
+#include "lang/package-info.h"
 
 //-----------------------------------------------------------------------------------------
 
@@ -32,8 +32,7 @@ namespace hal{
 /* ****************************************************************************************
  * Class/Interface/Struct
  */  
-struct hal::GeneralPin :public hal::GeneralOutput,
-    hal::GeneralInput{
+struct hal::GeneralPin :public hal::GeneralOutput, hal::GeneralInput{
 
   /* **************************************************************************************
    * Method
