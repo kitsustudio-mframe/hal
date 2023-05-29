@@ -1,11 +1,11 @@
 /**
  * Copyright (c) 2020 ZxyKira
  * All rights reserved.
- *
+ * 
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_BA8DBAF0_DCE9_4F33_B776_7C5470172961
-#define HAL_BA8DBAF0_DCE9_4F33_B776_7C5470172961
+#ifndef HAL_D6F1DE5B_EB64_4F4E_8E76_26C5EE0EF55F
+#define HAL_D6F1DE5B_EB64_4F4E_8E76_26C5EE0EF55F
 
 /* ****************************************************************************************
  * Include
@@ -15,44 +15,30 @@
 #include "lang/package-info.h"
 
 //-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
 
 //-----------------------------------------------------------------------------------------
 
 /* ****************************************************************************************
  * Namespace
- */
+ */  
 
-namespace hal {
-  struct EdgeTrigger;
-  struct EdgeTriggerEvent;
-}  // namespace hal
+namespace hal{
+  enum struct GeneralPinMode : char;
+}
 
 /* ****************************************************************************************
  * Class/Interface/Struct
- */
-struct hal::EdgeTriggerEvent : public virtual lang::Interface {
-  /* **************************************************************************************
-   * Method
-   */
-
-  /**
-   * @brief
-   *
-   * @param status
-   */
-  virtual void onEdgeTriggerRise(EdgeTrigger& edgeTrigger) abstract;
-
-  /**
-   * @brief
-   *
-   * @param status
-   */
-  virtual void onEdgeTriggerFall(EdgeTrigger& edgeTrigger) abstract;
+ */  
+enum struct hal::GeneralPinMode : char{
+  NOT_SUPPORT,
+  PUSH_PULL,
+  PULL_UP,
+  PULL_DOWN,
+  OPEN_DRAIN
 };
 
 /* *****************************************************************************************
  * End of file
- */
+ */ 
 
-#endif /* HAL_BA8DBAF0_DCE9_4F33_B776_7C5470172961 */
+#endif /* HAL_D6F1DE5B_EB64_4F4E_8E76_26C5EE0EF55F */

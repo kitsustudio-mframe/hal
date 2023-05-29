@@ -24,7 +24,7 @@
  */
 
 namespace hal {
-  class FlashStorage;
+  struct FlashStorage;
   struct FlashStorageEvent;
 }
 

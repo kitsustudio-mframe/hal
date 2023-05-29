@@ -25,6 +25,7 @@
 #include "GeneralInput.h"
 #include "GeneralOutput.h"
 #include "GeneralPin.h"
+#include "GeneralPinMode.h"
 #include "GeneralPort.h"
 #include "InterruptEvent.h"
 #include "PulseWidthPin.h"

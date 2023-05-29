@@ -19,6 +19,7 @@
 //-----------------------------------------------------------------------------------------
 #include "./GeneralInput.h"
 #include "./GeneralOutput.h"
+#include "./GeneralPinMode.h"
 
 /* ****************************************************************************************
  * Namespace
@@ -34,11 +35,6 @@ namespace hal{
 struct hal::GeneralPin :public hal::GeneralOutput, hal::GeneralInput{
 
   /* **************************************************************************************
-   * sub class/enum/struct
-   */
-  enum struct Mode : char;
-
-  /* **************************************************************************************
    * Method
    */
 
@@ -47,15 +43,15 @@ struct hal::GeneralPin :public hal::GeneralOutput, hal::GeneralInput{
    * 
    * @return PinMode 
    */
-  virtual Mode getPinMode(void) abstract;
+  virtual hal::GeneralPinMode getPinMode(void) = 0;
 
   /**
    * @brief Set the Pin Mode object
    * 
    * @param mode 
-   * @return Mode 返回設定模式
+   * @return hal::GeneralPinMode 返回設定模式
    */
-  virtual Mode setPinMode(Mode mode) abstract; 
+  virtual hal::GeneralPinMode setPinMode(hal::GeneralPinMode mode) = 0; 
 
   /**
    * @brief  Get io direction.
@@ -63,39 +59,27 @@ struct hal::GeneralPin :public hal::GeneralOutput, hal::GeneralInput{
    * @return true output
    * @return false input
    */
-  virtual bool getDir(void) abstract;
+  virtual bool getDir(void) = 0;
   
   /**
    * @brief Set io direction.
    * 
    * @param dir false = input, true = output.
    */
-  virtual void setDir(bool dir) abstract;
+  virtual void setDir(bool dir) = 0;
 
   /**
    * @brief Set the Input object
    * 
    */
-  virtual void setInput(void) abstract;
+  virtual void setInput(void) = 0;
 
   /**
    * @brief Set the Output object
    * 
    */
-  virtual void setOutput(void)abstract;
+  virtual void setOutput(void) = 0;
 };
-
-/* ****************************************************************************************
- * Class/Interface/Struct
- */  
-enum hal::GeneralPin::Mode : char{
-  NOT_SUPPORT,
-  PUSH_PULL,
-  PULL_UP,
-  PULL_DOWN,
-  OPEN_DRAIN
-};
-
 
 /* *****************************************************************************************
  * End of file
