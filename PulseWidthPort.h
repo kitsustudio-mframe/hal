@@ -43,21 +43,21 @@ struct hal::PulseWidthPort :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool setFrequence(float hz) = 0;
+  virtual bool setFrequence(float hz) abstract;
 
   /**
    * @brief Get the Frequence object
    * 
    * @return float 
    */
-  virtual float getFrequence(void) = 0;
+  virtual float getFrequence(void) abstract;
 
   /**
    * @brief Get the Period object
    * 
    * @return int 
    */
-  virtual int getPeriod(void) = 0;
+  virtual int getPeriod(void) abstract;
   
   /**
    * @brief Get the Duty object
@@ -65,7 +65,7 @@ struct hal::PulseWidthPort :public hal::Base{
    * @param pin 
    * @return float 
    */
-  virtual float getDuty(int pin) = 0;
+  virtual float getDuty(int pin) abstract;
 
   /**
    * @brief Get the Duty Tick object
@@ -73,7 +73,7 @@ struct hal::PulseWidthPort :public hal::Base{
    * @param pin 
    * @return int 
    */
-  virtual int getDutyTick(int pin) = 0;
+  virtual int getDutyTick(int pin) abstract;
   
   /**
    * @brief Set the Duty object
@@ -83,7 +83,7 @@ struct hal::PulseWidthPort :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool setDuty(int pin, float percent) = 0;
+  virtual bool setDuty(int pin, float percent) abstract;
   
   /**
    * @brief Set the Duty Tick object
@@ -93,7 +93,7 @@ struct hal::PulseWidthPort :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool setDutyTick(int pin, int duty) = 0;
+  virtual bool setDutyTick(int pin, int duty) abstract;
 
   /**
    * @brief 
@@ -102,7 +102,7 @@ struct hal::PulseWidthPort :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool enable(int pin) = 0;
+  virtual bool enable(int pin) abstract;
   
   /**
    * @brief 
@@ -111,7 +111,7 @@ struct hal::PulseWidthPort :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool disable(int pin) = 0;
+  virtual bool disable(int pin) abstract;
 };
 
 /* ****************************************************************************************

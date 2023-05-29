@@ -37,7 +37,7 @@ struct hal::Base :public virtual lang::Interface{
    * @return true 
    * @return false 
    */
-  virtual bool deinit(void) = 0;
+  virtual bool deinit(void) abstract;
 
   /**
    * @brief initialze hardware;
@@ -45,7 +45,7 @@ struct hal::Base :public virtual lang::Interface{
    * @return true 
    * @return false 
    */
-  virtual bool init(void) = 0;
+  virtual bool init(void) abstract;
 
   /**
    * @brief get hardware initialzed status.
@@ -53,7 +53,7 @@ struct hal::Base :public virtual lang::Interface{
    * @return true not init
    * @return false initd
    */
-  virtual bool isInit(void) = 0;
+  virtual bool isInit(void) abstract;
    
 };
 

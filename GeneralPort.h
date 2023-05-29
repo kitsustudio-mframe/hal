@@ -41,7 +41,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param port 
    * @return uint32_t 
    */
-  virtual uint32_t dir(uint32_t port) = 0;
+  virtual uint32_t dir(uint32_t port) abstract;
 
   /**
    * @brief 
@@ -49,7 +49,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param port 
    * @param value 
    */
-  virtual void dir(uint32_t port, uint32_t value) = 0;
+  virtual void dir(uint32_t port, uint32_t value) abstract;
   
   /**
    * @brief 
@@ -57,7 +57,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param port 
    * @param mask 
    */
-  virtual void dirClear(uint32_t port, uint32_t mask) = 0;
+  virtual void dirClear(uint32_t port, uint32_t mask) abstract;
   
   /**
    * @brief 
@@ -65,7 +65,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param port 
    * @param mask 
    */
-  virtual void dirSet(uint32_t port, uint32_t mask) = 0;
+  virtual void dirSet(uint32_t port, uint32_t mask) abstract;
 
   /**
    * @brief Get port value.
@@ -73,7 +73,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param port GPIO port.
    * @return pin value 0 = low, 1 = high.
    */
-  virtual uint32_t pin(uint32_t port) = 0;
+  virtual uint32_t pin(uint32_t port) abstract;
 
   /**
    * @brief Set port value.
@@ -82,7 +82,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param value 0 = low, 
    *              1 = high.
    */
-  virtual void pin(uint32_t port, uint32_t value) = 0;
+  virtual void pin(uint32_t port, uint32_t value) abstract;
   
   /**
    * @brief Set port mask low.
@@ -91,7 +91,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param value 0 = No operation. 
    *              1 = Set output bit low.
    */
-  virtual void pinClear(uint32_t port, uint32_t mask) = 0;
+  virtual void pinClear(uint32_t port, uint32_t mask) abstract;
 
   /**
    * @brief Set port mask high.
@@ -100,7 +100,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param value 0 = No operation. 
    *              1 = Set output bit high.
    */
-  virtual void pinSet(uint32_t port, uint32_t mask) = 0;
+  virtual void pinSet(uint32_t port, uint32_t mask) abstract;
   
   /**
    * @brief Set port mask toggle.
@@ -109,7 +109,7 @@ struct hal::GeneralPort :public hal::Base{
    * @param value 0 = No operation. 
    *              1 = Set output bit toggle.
    */
-  virtual void pinToggle(uint32_t port, uint32_t mask) = 0;
+  virtual void pinToggle(uint32_t port, uint32_t mask) abstract;
 };
 
 /* *****************************************************************************************

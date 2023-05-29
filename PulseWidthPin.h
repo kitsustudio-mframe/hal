@@ -41,21 +41,21 @@ struct hal::PulseWidthPin :public virtual lang::Interface{
    * 
    * @return int 
    */
-  virtual int getPeriod(void) = 0;
+  virtual int getPeriod(void) abstract;
   
   /**
    * @brief Get the Duty object
    * 
    * @return float 
    */
-  virtual float getDuty(void) = 0;
+  virtual float getDuty(void) abstract;
   
   /**
    * @brief Get the Frequence object
    * 
    * @return float 
    */
-  virtual float getFrequence(void) = 0;
+  virtual float getFrequence(void) abstract;
   
   /**
    * @brief Set the Duty object
@@ -64,7 +64,7 @@ struct hal::PulseWidthPin :public virtual lang::Interface{
    * @return true 
    * @return false 
    */
-  virtual bool setDuty(float percent) = 0;
+  virtual bool setDuty(float percent) abstract;
   
   /**
    * @brief Set the Duty object
@@ -73,7 +73,7 @@ struct hal::PulseWidthPin :public virtual lang::Interface{
    * @return true 
    * @return false 
    */
-  virtual bool setDuty(int duty) = 0;
+  virtual bool setDuty(int duty) abstract;
 
   /**
    * @brief 
@@ -81,7 +81,7 @@ struct hal::PulseWidthPin :public virtual lang::Interface{
    * @return true 
    * @return false 
    */
-  virtual bool stop(void) = 0;
+  virtual bool stop(void) abstract;
 
 };
 

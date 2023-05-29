@@ -43,14 +43,14 @@ struct hal::AnalogInputPin :public virtual lang::Interface{
    * 
    * @return uint32_t 
    */
-  virtual uint32_t convert(void) = 0;
+  virtual uint32_t convert(void) abstract;
 
   /**
    * @brief Get the adc convert level.
    * 
    * @return uint32_t 
    */
-  virtual uint32_t getConvertLevel(void) = 0;
+  virtual uint32_t getConvertLevel(void) abstract;
 };  
 
 /* *****************************************************************************************

@@ -39,26 +39,26 @@ struct hal::GeneralOutput :public virtual lang::Interface{
    * @brief Set the High object
    * 
    */
-  virtual void setHigh(void) = 0;
+  virtual void setHigh(void) abstract;
 
   /**
    * @brief Set the Low object
    * 
    */
-  virtual void setLow(void) = 0;
+  virtual void setLow(void) abstract;
 
   /**
    * @brief Set the Toggle object
    * 
    */
-  virtual void setToggle(void) = 0;  
+  virtual void setToggle(void) abstract;  
   
   /**
    * @brief 
    * 
    * @param level 
    */
-  virtual void setValue(bool level) = 0;
+  virtual void setValue(bool level) abstract;
 
 };
 

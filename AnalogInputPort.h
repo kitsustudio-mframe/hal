@@ -39,14 +39,14 @@ struct hal::AnalogInputPort :public hal::Base{
    * @param pin 
    * @return uint32_t 
    */
-  virtual uint32_t read(int channel) = 0;
+  virtual uint32_t read(int channel) abstract;
 
   /**
    * @brief Get the adc convert bit.
    * 
    * @return uint32_t 
    */
-  virtual uint32_t getConvertLevel(void) = 0;
+  virtual uint32_t getConvertLevel(void) abstract;
 };  
 
 /* *****************************************************************************************

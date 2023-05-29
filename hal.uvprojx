@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>-AT32F415RBT7</Device>
           <Vendor>ArteryTek</Vendor>
-          <PackID>ArteryTek.AT32F415_DFP.2.0.8</PackID>
+          <PackID>ArteryTek.AT32F415_DFP.2.0.6</PackID>
           <Cpu>IRAM(0x20000000,0x8000) IROM(0x08000000,0x20000) CPUTYPE("Cortex-M4") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -185,7 +185,6 @@
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
-            <nBranchProt>0</nBranchProt>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -322,7 +321,7 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>3</wLevel>
+            <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
@@ -337,7 +336,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>AT32F415RBT7</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath>..\</IncludePath>
             </VariousControls>
@@ -409,11 +408,6 @@
               <FilePath>.\EdgeTriggerEvent.h</FilePath>
             </File>
             <File>
-              <FileName>EdgeTriggerStatus.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\EdgeTriggerStatus.h</FilePath>
-            </File>
-            <File>
               <FileName>FlashStorage.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\FlashStorage.h</FilePath>
@@ -422,11 +416,6 @@
               <FileName>FlashStorageEvent.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\FlashStorageEvent.h</FilePath>
-            </File>
-            <File>
-              <FileName>FlashStorageStatus.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\FlashStorageStatus.h</FilePath>
             </File>
             <File>
               <FileName>GeneralInput.h</FileName>
@@ -442,11 +431,6 @@
               <FileName>GeneralPin.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\GeneralPin.h</FilePath>
-            </File>
-            <File>
-              <FileName>GeneralPinMode.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\GeneralPinMode.h</FilePath>
             </File>
             <File>
               <FileName>GeneralPort.h</FileName>
@@ -474,41 +458,6 @@
               <FilePath>.\PulseWidthPort.h</FilePath>
             </File>
             <File>
-              <FileName>SerialBus.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialBus.h</FilePath>
-            </File>
-            <File>
-              <FileName>SerialBusEvent.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialBusEvent.h</FilePath>
-            </File>
-            <File>
-              <FileName>SerialBusStatus.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialBusStatus.h</FilePath>
-            </File>
-            <File>
-              <FileName>SerialPeriph.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialPeriph.h</FilePath>
-            </File>
-            <File>
-              <FileName>SerialPeriphEvent.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialPeriphEvent.h</FilePath>
-            </File>
-            <File>
-              <FileName>SerialPeriphStatus.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialPeriphStatus.h</FilePath>
-            </File>
-            <File>
-              <FileName>SerialPort.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\SerialPort.h</FilePath>
-            </File>
-            <File>
               <FileName>Timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Timer.h</FilePath>
@@ -518,10 +467,20 @@
               <FileType>5</FileType>
               <FilePath>.\TimerEvent.h</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>src/usart</GroupName>
+          <Files>
             <File>
-              <FileName>TimerStatus.h</FileName>
+              <FileName>Event.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\TimerStatus.h</FilePath>
+              <FilePath>.\usart\Event.h</FilePath>
+            </File>
+            <File>
+              <FileName>USART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\usart\USART.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -41,7 +41,7 @@ struct hal::Timer :public hal::Base{
    * @brief 
    * 
    */
-  virtual void cancel(void) = 0;
+  virtual void cancel(void) abstract;
 
   /**
    * @brief 
@@ -49,7 +49,7 @@ struct hal::Timer :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool isBusy(void) = 0;
+  virtual bool isBusy(void) abstract;
   
   /**
    * @brief 
@@ -57,20 +57,20 @@ struct hal::Timer :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool isDone(void) = 0;
+  virtual bool isDone(void) abstract;
 
   /**
    * @brief 
    * 
    */
-  virtual void waitDone(void) = 0;
+  virtual void waitDone(void) abstract;
   
   /**
    * @brief Get the Timer Clock object
    * 
    * @return uint32_t hz
    */
-  virtual uint32_t getTimerClock(void) = 0;  
+  virtual uint32_t getTimerClock(void) abstract;  
 
   /**
    * @brief 
@@ -79,7 +79,7 @@ struct hal::Timer :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool startAtTick(uint32_t tick) = 0;
+  virtual bool startAtTick(uint32_t tick) abstract;
 
   /**
    * @brief 
@@ -89,7 +89,7 @@ struct hal::Timer :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool startAtTick(uint32_t tick, hal::TimerEvent* event) = 0;
+  virtual bool startAtTick(uint32_t tick, hal::TimerEvent* event) abstract;
   
   /**
    * @brief 
@@ -98,7 +98,7 @@ struct hal::Timer :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool startAtTime(uint32_t microSecond) = 0;
+  virtual bool startAtTime(uint32_t microSecond) abstract;
 
   /**
    * @brief 
@@ -108,14 +108,14 @@ struct hal::Timer :public hal::Base{
    * @return true 
    * @return false 
    */
-  virtual bool startAtTime(uint32_t microSecond, hal::TimerEvent* event) = 0;
+  virtual bool startAtTime(uint32_t microSecond, hal::TimerEvent* event) abstract;
   
   /**
    * @brief 
    * 
    * @param tick 
    */
-  virtual void resetTick(uint32_t tick) = 0;
+  virtual void resetTick(uint32_t tick) abstract;
 
 };
 

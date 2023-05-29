@@ -39,19 +39,19 @@ struct hal::EdgeTrigger :public hal::Base{
    * @brief 取消全部邊緣觸發事件
    * 
    */
-  virtual void disableAll(void) = 0;
+  virtual void disableAll(void) abstract;
 
   /**
    * @brief 取消負緣觸發
    * 
    */
-  virtual void disableFall(void) = 0;
+  virtual void disableFall(void) abstract;
 
   /**
    * @brief 取消正緣觸發
    * 
    */
-  virtual void disableRise(void) = 0;
+  virtual void disableRise(void) abstract;
 
   /**
    * @brief 啟用負緣觸發
@@ -60,7 +60,7 @@ struct hal::EdgeTrigger :public hal::Base{
    * @return true 設定成功
    * @return false 設定失敗
    */
-  virtual bool enableFall(hal::EdgeTriggerEvent* event) = 0;
+  virtual bool enableFall(hal::EdgeTriggerEvent* event) abstract;
 
   /**
    * @brief 
@@ -69,7 +69,7 @@ struct hal::EdgeTrigger :public hal::Base{
    * @return true 設定成功
    * @return false 設定失敗
    */
-  virtual bool enableRise(hal::EdgeTriggerEvent* event) = 0;
+  virtual bool enableRise(hal::EdgeTriggerEvent* event) abstract;
 };
 
 /* *****************************************************************************************
