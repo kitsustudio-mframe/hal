@@ -1,0 +1,120 @@
+/**
+ * Copyright (c) 2020 ZxyKira
+ * All rights reserved.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+#ifndef HAL_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA
+#define HAL_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA
+
+/* ****************************************************************************************
+ * Include
+ */
+
+//-----------------------------------------------------------------------------------------
+#include "lang/package-info.h"
+
+//-----------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------
+#include "./../Base.h"
+#include "./EventCancel.h"
+#include "./EventTrigger.h"
+
+/* ****************************************************************************************
+ * Namespace
+ */
+
+namespace hal::timer {
+  struct Timer;
+}
+
+/* ****************************************************************************************
+ * Class/Interface/Struct
+ */
+struct hal::timer::Timer : public hal::Base {
+  /* **************************************************************************************
+   * Method
+   */
+
+  /**
+   * @brief
+   *
+   */
+  virtual void cancel(void) abstract;
+
+  /**
+   * @brief
+   *
+   * @return true
+   * @return false
+   */
+  virtual bool isBusy(void) abstract;
+
+  /**
+   * @brief
+   *
+   * @return true
+   * @return false
+   */
+  virtual bool isDone(void) abstract;
+
+  /**
+   * @brief
+   *
+   */
+  virtual void waitDone(void) abstract;
+
+  /**
+   * @brief Get the Timer Clock object
+   *
+   * @return uint32_t hz
+   */
+  virtual uint32_t getTimerClock(void) abstract;
+
+  /**
+   * @brief
+   *
+   * @param tick
+   * @return true
+   * @return false
+   */
+  virtual bool startAtTick(uint32_t tick) abstract;
+
+  /**
+   * @brief 設置Timer開始
+   *
+   * @param microSecond 時間週期
+   * @return true 設置成功
+   * @return false 設置失敗
+   */
+  virtual bool startAtTime(uint32_t microSecond) abstract;
+
+  /**
+   * @brief
+   *
+   * @param tick
+   */
+  virtual void resetTick(uint32_t tick) abstract;
+
+  /**
+   * @brief 設置Timer觸發事件
+   *
+   *
+   * @param event 事件
+   */
+  virtual void setEventTrigger(hal::timer::EventTrigger* event) abstract;
+
+  /**
+   * @brief 設定Timer終止事件
+   *
+   * @param event 事件
+   */
+  virtual void setEventCancel(hal::timer::EventCancel* event) abstract;
+};
+
+/* *****************************************************************************************
+ * End of file
+ */
+
+#endif /* HAL_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA */
