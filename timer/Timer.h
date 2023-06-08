@@ -84,11 +84,20 @@ struct hal::timer::Timer : public hal::Base {
   /**
    * @brief 設置Timer開始
    *
-   * @param microSecond 時間週期
+   * @param second 時間週期
    * @return true 設置成功
    * @return false 設置失敗
    */
-  virtual bool startAtTime(uint32_t microSecond) abstract;
+  virtual bool startAtTime(float second) abstract;
+
+  /**
+   * @brief 設置Timer開始
+   *
+   * @param hertz 時間週期
+   * @return true 設置成功
+   * @return false 設置失敗
+   */
+  virtual bool startAtHertz(float hertz) abstract;
 
   /**
    * @brief
