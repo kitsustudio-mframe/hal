@@ -25,13 +25,19 @@ namespace hal {
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
  */
+
+/**
+ * @brief 硬體中斷觸發事件，硬體抽象層 <Interface>
+ * 
+ */
 struct hal::InterruptEvent : public virtual lang::Interface {
   /* **************************************************************************************
    * Method
    */
 
   /**
-   *
+   * @brief 硬體中斷觸發事件
+   * 
    */
   virtual void interruptEvent(void) abstract;
 };

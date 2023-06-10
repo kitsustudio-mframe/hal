@@ -31,15 +31,18 @@ struct hal::GeneralPort : public hal::Base {
    */
 
   /**
-   * @brief
-   *
-   * @param port
-   * @return uint32_t
+   * @brief 讀取通用埠輸入輸出方向。
+   * 
+   * @param port 埠號碼。
+   * @return uint32_t 返回通用埠輸入輸出方向
+   * 
+   * - 0 輸入。
+   * - 1 輸出。
    */
   virtual uint32_t dir(uint32_t port) abstract;
 
   /**
-   * @brief
+   * @brief 讀取通用埠輸入輸出方向。
    *
    * @param port
    * @param value
@@ -47,7 +50,7 @@ struct hal::GeneralPort : public hal::Base {
   virtual void dir(uint32_t port, uint32_t value) abstract;
 
   /**
-   * @brief
+   * @brief 
    *
    * @param port
    * @param mask
