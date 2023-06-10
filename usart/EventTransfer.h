@@ -4,15 +4,15 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_EED8B891_287B_4333_8669_6523A44D8CCC
-#define HAL_EED8B891_287B_4333_8669_6523A44D8CCC
+#ifndef MFRAME_EED8B891_287B_4333_8669_6523A44D8CCC
+#define MFRAME_EED8B891_287B_4333_8669_6523A44D8CCC
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
+#include "./../../lang/Interface.h"
 
 //-----------------------------------------------------------------------------------------
 
@@ -26,13 +26,18 @@ namespace hal::usart {
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
  */
+
+/**
+ * @brief 同步非同步收發器傳輸事件 <Interface>
+ *
+ */
 struct hal::usart::EventTransfer : public virtual lang::Interface {
   /* **************************************************************************************
    * Method
    */
 
   /**
-   * @brief
+   * @brief 傳輸緩衝空事件。
    *
    * @param data 預發送資料
    * @return true 發送該筆資料
@@ -45,4 +50,4 @@ struct hal::usart::EventTransfer : public virtual lang::Interface {
  * End of file
  */
 
-#endif /* HAL_EED8B891_287B_4333_8669_6523A44D8CCC */
+#endif /* MFRAME_EED8B891_287B_4333_8669_6523A44D8CCC */

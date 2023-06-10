@@ -4,22 +4,18 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_151D474C_7D7F_471E_96DB_052C7A994602
-#define HAL_151D474C_7D7F_471E_96DB_052C7A994602
+#ifndef MFRAME_151D474C_7D7F_471E_96DB_052C7A994602
+#define MFRAME_151D474C_7D7F_471E_96DB_052C7A994602
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-
-//-----------------------------------------------------------------------------------------
-#include "./../Base.h"
-#include "./EventReceiver.h"
-#include "./EventTransfer.h"
+#include "./../../hal/Base.h"
+#include "./../../hal/usart/EventReceiver.h"
+#include "./../../hal/usart/EventTransfer.h"
+#include "./../../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
@@ -30,6 +26,11 @@ namespace hal::usart {
 
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
+ */
+
+/**
+ * @brief 同步非同步收發器硬體抽象層 <Interface>
+ * 
  */
 struct hal::usart::USART : public hal::Base {
   /* **************************************************************************************
@@ -84,11 +85,11 @@ struct hal::usart::USART : public hal::Base {
    *
    * @param event 事件，可為nullptr
    */
-  virtual void setEventReceiver(EventReceiver* event) abstract;  
+  virtual void setEventReceiver(EventReceiver* event) abstract;
 };
 
 /* ****************************************************************************************
  * End of file
  */
 
-#endif /* HAL_151D474C_7D7F_471E_96DB_052C7A994602 */
+#endif /* MFRAME_151D474C_7D7F_471E_96DB_052C7A994602 */

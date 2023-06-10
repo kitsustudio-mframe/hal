@@ -1,52 +1,43 @@
 /**
  * Copyright (c) 2020 ZxyKira
  * All rights reserved.
- * 
+ *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_9E61DE90_7223_4EE7_BB33_FE3C45509F28
-#define HAL_9E61DE90_7223_4EE7_BB33_FE3C45509F28
+#ifndef MFRAME_9E61DE90_7223_4EE7_BB33_FE3C45509F28
+#define MFRAME_9E61DE90_7223_4EE7_BB33_FE3C45509F28
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
-
-//-----------------------------------------------------------------------------------------
+#include "./../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
  */
 
-namespace hal{
+namespace hal {
   struct InterruptEvent;
 }
-
-
 
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
  */
-struct hal::InterruptEvent :public virtual lang::Interface{
-
+struct hal::InterruptEvent : public virtual lang::Interface {
   /* **************************************************************************************
    * Method
    */
-  
+
   /**
    *
    */
   virtual void interruptEvent(void) abstract;
-
 };
 
 /* ****************************************************************************************
  * End of file
  */
 
-#endif /* HAL_9E61DE90_7223_4EE7_BB33_FE3C45509F28 */
+#endif /* MFRAME_9E61DE90_7223_4EE7_BB33_FE3C45509F28 */

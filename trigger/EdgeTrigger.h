@@ -4,22 +4,17 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_EFF1A157_A291_4313_A742_99FB124D0B71
-#define HAL_EFF1A157_A291_4313_A742_99FB124D0B71
+#ifndef MFRAME_EFF1A157_A291_4313_A742_99FB124D0B71
+#define MFRAME_EFF1A157_A291_4313_A742_99FB124D0B71
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-#include "./../Base.h"
-
-//-----------------------------------------------------------------------------------------
-#include "./EventFall.h"
-#include "./EventRise.h"
+#include "./../../hal/Base.h"
+#include "./../../hal/trigger/EventFall.h"
+#include "./../../hal/trigger/EventRise.h"
 
 /* ****************************************************************************************
  * Namespace
@@ -31,6 +26,11 @@ namespace hal::trigger {
 
 /* ****************************************************************************************
  * Class/Interface/Struct
+ */
+
+/**
+ * @brief 邊緣觸發硬體抽象層 <Interface>
+ * 
  */
 struct hal::trigger::EdgeTrigger : public hal::Base {
   /* **************************************************************************************
@@ -109,4 +109,4 @@ struct hal::trigger::EdgeTrigger : public hal::Base {
  * End of file
  */
 
-#endif /* HAL_EFF1A157_A291_4313_A742_99FB124D0B71 */
+#endif /* MFRAME_EFF1A157_A291_4313_A742_99FB124D0B71 */

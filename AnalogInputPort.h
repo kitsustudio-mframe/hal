@@ -4,18 +4,15 @@
  * 
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_C04F29D8_8794_4EA6_A3AD_CFBD1C61458B
-#define HAL_C04F29D8_8794_4EA6_A3AD_CFBD1C61458B
+#ifndef MFRAME_C04F29D8_8794_4EA6_A3AD_CFBD1C61458B
+#define MFRAME_C04F29D8_8794_4EA6_A3AD_CFBD1C61458B
 
 /* ****************************************************************************************
  * Include
  */  
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-#include "./Base.h"
+#include "./../hal/Base.h"
 
 /* ****************************************************************************************
  * Namespace
@@ -28,11 +25,17 @@ namespace hal{
 /* ****************************************************************************************
  * Class/Interface/Struct
  */  
+
+/**
+ * @brief 類比輸入訊號硬體抽象層 <Interface>
+ * 
+ */
 struct hal::AnalogInputPort :public hal::Base{
 
   /* **************************************************************************************
    * Method
    */
+  
   /**
    * @brief 
    * 
@@ -53,4 +56,4 @@ struct hal::AnalogInputPort :public hal::Base{
  * End of file
  */
 
-#endif /* HAL_C04F29D8_8794_4EA6_A3AD_CFBD1C61458B */
+#endif /* MFRAME_C04F29D8_8794_4EA6_A3AD_CFBD1C61458B */

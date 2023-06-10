@@ -4,17 +4,15 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_BA8DBAF0_DCE9_4F33_B776_7C5470172961
-#define HAL_BA8DBAF0_DCE9_4F33_B776_7C5470172961
+#ifndef MFRAME_BA8DBAF0_DCE9_4F33_B776_7C5470172961
+#define MFRAME_BA8DBAF0_DCE9_4F33_B776_7C5470172961
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-
-//-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
+#include "./../../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
@@ -26,6 +24,11 @@ namespace hal::trigger {
 
 /* ****************************************************************************************
  * Class/Interface/Struct
+ */
+
+/**
+ * @brief 邊緣觸發正觸發事件 <Interface>
+ * 
  */
 struct hal::trigger::EventRise : public virtual lang::Interface {
   /* **************************************************************************************
@@ -44,4 +47,4 @@ struct hal::trigger::EventRise : public virtual lang::Interface {
  * End of file
  */
 
-#endif /* HAL_BA8DBAF0_DCE9_4F33_B776_7C5470172961 */
+#endif /* MFRAME_BA8DBAF0_DCE9_4F33_B776_7C5470172961 */

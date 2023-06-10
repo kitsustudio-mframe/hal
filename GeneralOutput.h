@@ -1,69 +1,69 @@
 /**
  * Copyright (c) 2020 ZxyKira
  * All rights reserved.
- * 
+ *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_F5896110_0162_406F_9ECE_A67699B0938F
-#define HAL_F5896110_0162_406F_9ECE_A67699B0938F
+#ifndef MFRAME_F5896110_0162_406F_9ECE_A67699B0938F
+#define MFRAME_F5896110_0162_406F_9ECE_A67699B0938F
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
-
-//-----------------------------------------------------------------------------------------
+#include "./../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal{
+namespace hal {
   struct GeneralOutput;
 }
-
 
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
  */
-struct hal::GeneralOutput :public virtual lang::Interface{
+
+/**
+ * @brief 通用引腳輸出，硬體抽象層 <Interface>
+ * 
+ */
+struct hal::GeneralOutput : public virtual lang::Interface {
   /* **************************************************************************************
    * Method
    */
 
   /**
-   * @brief Set the High object
-   * 
+   * @brief 設定引腳輸出高電平。
+   *
    */
   virtual void setHigh(void) abstract;
 
   /**
-   * @brief Set the Low object
-   * 
+   * @brief 設定引腳輸出低電平。
+   *
    */
   virtual void setLow(void) abstract;
 
   /**
-   * @brief Set the Toggle object
-   * 
+   * @brief 設定引腳輸出反向電平。
+   *
    */
-  virtual void setToggle(void) abstract;  
-  
+  virtual void setToggle(void) abstract;
+
   /**
-   * @brief 
-   * 
-   * @param level 
+   * @brief 設定引腳輸出電平。
+   *
+   * @param level
+   * - true 設定輸出高電平。
+   * - false 設定輸出低電平。
    */
   virtual void setValue(bool level) abstract;
-
 };
 
 /* ****************************************************************************************
  * End of file
  */
 
-#endif /* HAL_F5896110_0162_406F_9ECE_A67699B0938F */
+#endif /* MFRAME_F5896110_0162_406F_9ECE_A67699B0938F */

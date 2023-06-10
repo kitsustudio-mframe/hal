@@ -4,33 +4,32 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA
-#define HAL_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA
+#ifndef MFRAME_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA
+#define MFRAME_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-
-//-----------------------------------------------------------------------------------------
-#include "./../Base.h"
-#include "./EventCancel.h"
-#include "./EventTrigger.h"
+#include "./../../hal/Base.h"
+#include "./../../hal/timer/EventCancel.h"
+#include "./../../hal/timer/EventTrigger.h"
 
 /* ****************************************************************************************
  * Namespace
  */
-
 namespace hal::timer {
   struct Timer;
 }
 
 /* ****************************************************************************************
  * Class/Interface/Struct
+ */
+
+/**
+ * @brief 硬體計時器硬體抽象層 <Interface>
+ * 
  */
 struct hal::timer::Timer : public hal::Base {
   /* **************************************************************************************
@@ -126,4 +125,4 @@ struct hal::timer::Timer : public hal::Base {
  * End of file
  */
 
-#endif /* HAL_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA */
+#endif /* MFRAME_AD0B942D_EE2D_4080_BDAD_3E9AACE341DA */

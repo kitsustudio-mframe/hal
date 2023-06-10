@@ -4,32 +4,30 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
-#ifndef HAL_DF0EC699_78D6_4243_A75D_F321C92D88BB
-#define HAL_DF0EC699_78D6_4243_A75D_F321C92D88BB
+#ifndef MFRAME_DF0EC699_78D6_4243_A75D_F321C92D88BB
+#define MFRAME_DF0EC699_78D6_4243_A75D_F321C92D88BB
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
-
-//-----------------------------------------------------------------------------------------
+#include "./../../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
  */
-
 namespace hal::timer {
   struct EventTrigger;
-}  // namespace hal
+}  // namespace hal::timer
 
 /* ****************************************************************************************
  * Class/Interface/Struct
+ */
+
+/**
+ * @brief 硬體計時器觸發事件 <Interface>
+ * 
  */
 struct hal::timer::EventTrigger : public virtual lang::Interface {
   /* **************************************************************************************
@@ -38,10 +36,10 @@ struct hal::timer::EventTrigger : public virtual lang::Interface {
 
   /**
    * @brief 計時器觸發事件
-   * 
+   *
    * 當計時器下數歸零時呼叫此事件
    */
   virtual void onTimerTrigger(void) abstract;
 };
 
-#endif /* HAL_DF0EC699_78D6_4243_A75D_F321C92D88BB */
+#endif /* MFRAME_DF0EC699_78D6_4243_A75D_F321C92D88BB */

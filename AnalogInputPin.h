@@ -1,60 +1,58 @@
 /**
  * Copyright (c) 2020 ZxyKira
  * All rights reserved.
- * 
+ *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_B16985A9_A63C_403C_9D7B_5B3BB7B33CFA
-#define HAL_B16985A9_A63C_403C_9D7B_5B3BB7B33CFA
+#ifndef MFRAME_B16985A9_A63C_403C_9D7B_5B3BB7B33CFA
+#define MFRAME_B16985A9_A63C_403C_9D7B_5B3BB7B33CFA
 
 /* ****************************************************************************************
  * Include
- */  
+ */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-
-//-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
-
-//-----------------------------------------------------------------------------------------
-#include "./Base.h"
+#include "./../hal/Base.h"
+#include "./../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
  */
 
-namespace hal{
+namespace hal {
   struct AnalogInputPin;
 }
 
-
 /* ****************************************************************************************
  * Class/Interface/Struct
- */  
-struct hal::AnalogInputPin :public virtual lang::Interface{
+ */
 
+/**
+ * @brief 類比輸入訊號引腳硬體抽象層 <Interface>
+ * 
+ */
+struct hal::AnalogInputPin : public virtual lang::Interface {
   /* **************************************************************************************
    * Method
    */
-  
+
   /**
-   * @brief 
-   * 
-   * @return uint32_t 
+   * @brief
+   *
+   * @return uint32_t
    */
   virtual uint32_t convert(void) abstract;
 
   /**
    * @brief Get the adc convert level.
-   * 
-   * @return uint32_t 
+   *
+   * @return uint32_t
    */
   virtual uint32_t getConvertLevel(void) abstract;
-};  
+};
 
 /* *****************************************************************************************
  * End of file
  */
 
-#endif /* HAL_B16985A9_A63C_403C_9D7B_5B3BB7B33CFA */
+#endif /* MFRAME_B16985A9_A63C_403C_9D7B_5B3BB7B33CFA */

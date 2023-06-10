@@ -4,16 +4,15 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#ifndef HAL_4DC8702A_119D_4444_AC76_BE736044C70E
-#define HAL_4DC8702A_119D_4444_AC76_BE736044C70E
+#ifndef MFRAME_4DC8702A_119D_4444_AC76_BE736044C70E
+#define MFRAME_4DC8702A_119D_4444_AC76_BE736044C70E
 
 /* ****************************************************************************************
  * Include
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/package-info.h"
-//-----------------------------------------------------------------------------------------
+#include "./../../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
@@ -25,14 +24,18 @@ namespace hal::usart {
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
  */
-struct hal::usart::EventReceiver {
+
+/**
+ * @brief 同步非同步收發器接收事件 <Interface>
+ *
+ */
+struct hal::usart::EventReceiver : public virtual lang::Interface {
   /* **************************************************************************************
    * Method
    */
 
   /**
-   * @brief
-   * 接收事件，當成功接收字元時呼叫該方法。
+   * @brief 接收緩衝滿事件。
    *
    * @param data 接收資料
    * @return true 持續接收下一個資料
@@ -45,4 +48,4 @@ struct hal::usart::EventReceiver {
  * End of file
  */
 
-#endif /* HAL_4DC8702A_119D_4444_AC76_BE736044C70E */
+#endif /* MFRAME_4DC8702A_119D_4444_AC76_BE736044C70E */
