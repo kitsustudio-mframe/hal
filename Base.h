@@ -12,12 +12,12 @@
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
+#include "./../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal {
+namespace mframe::hal {
   struct Base;
 }
 
@@ -29,7 +29,7 @@ namespace hal {
  * @brief 硬體抽象層初始化共基類 <Interface>
  *
  */
-struct hal::Base : public virtual lang::Interface {
+struct mframe::hal::Base : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

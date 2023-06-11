@@ -17,9 +17,9 @@
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal::timer {
+namespace mframe::hal::timer {
   struct EventTrigger;
-}  // namespace hal::timer
+}  // namespace mframe::hal::timer
 
 /* ****************************************************************************************
  * Class/Interface/Struct
@@ -27,9 +27,9 @@ namespace hal::timer {
 
 /**
  * @brief 硬體計時器觸發事件 <Interface>
- * 
+ *
  */
-struct hal::timer::EventTrigger : public virtual lang::Interface {
+struct mframe::hal::timer::EventTrigger : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

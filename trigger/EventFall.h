@@ -17,9 +17,9 @@
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal::trigger {
+namespace mframe::hal::trigger {
   struct EventFall;
-}  // namespace hal::trigger
+}  // namespace mframe::hal::trigger
 
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
@@ -27,9 +27,9 @@ namespace hal::trigger {
 
 /**
  * @brief 邊緣觸發負觸發事件 <Interface>
- * 
+ *
  */
-struct hal::trigger::EventFall : public virtual lang::Interface {
+struct mframe::hal::trigger::EventFall : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

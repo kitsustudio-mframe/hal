@@ -18,24 +18,24 @@
  * Namespace
  */
 
-namespace hal {
+namespace mframe::hal {
   struct GeneralPort;
 }
 
 /* ****************************************************************************************
  * Class/Interface/Struct
  */
-struct hal::GeneralPort : public hal::Base {
+struct mframe::hal::GeneralPort : public mframe::hal::Base {
   /* **************************************************************************************
    * Method
    */
 
   /**
    * @brief 讀取通用埠輸入輸出方向。
-   * 
+   *
    * @param port 埠號碼。
    * @return uint32_t 返回通用埠輸入輸出方向
-   * 
+   *
    * - 0 輸入。
    * - 1 輸出。
    */
@@ -50,7 +50,7 @@ struct hal::GeneralPort : public hal::Base {
   virtual void dir(uint32_t port, uint32_t value) abstract;
 
   /**
-   * @brief 
+   * @brief
    *
    * @param port
    * @param mask

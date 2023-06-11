@@ -19,7 +19,7 @@
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal::timer {
+namespace mframe::hal::timer {
   struct Timer;
 }
 
@@ -29,9 +29,9 @@ namespace hal::timer {
 
 /**
  * @brief 硬體計時器硬體抽象層 <Interface>
- * 
+ *
  */
-struct hal::timer::Timer : public hal::Base {
+struct mframe::hal::timer::Timer : public mframe::hal::Base {
   /* **************************************************************************************
    * Method
    */
@@ -111,14 +111,14 @@ struct hal::timer::Timer : public hal::Base {
    *
    * @param event 事件
    */
-  virtual void setEventTrigger(hal::timer::EventTrigger* event) abstract;
+  virtual void setEventTrigger(mframe::hal::timer::EventTrigger* event) abstract;
 
   /**
    * @brief 設定Timer終止事件
    *
    * @param event 事件
    */
-  virtual void setEventCancel(hal::timer::EventCancel* event) abstract;
+  virtual void setEventCancel(mframe::hal::timer::EventCancel* event) abstract;
 };
 
 /* *****************************************************************************************

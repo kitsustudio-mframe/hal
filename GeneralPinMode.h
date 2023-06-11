@@ -18,14 +18,14 @@
  * Namespace
  */
 
-namespace hal {
+namespace mframe::hal {
   enum struct GeneralPinMode : char;
 }
 
 /* ****************************************************************************************
  * Class/Interface/Struct
  */
-enum struct hal::GeneralPinMode : char {
+enum struct mframe::hal::GeneralPinMode : char {
   NOT_SUPPORT,  ///< 不支援該功能
   PUSH_PULL,    ///< 推輓輸出
   PULL_UP,      ///< 引腳上拉

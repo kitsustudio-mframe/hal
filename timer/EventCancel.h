@@ -17,7 +17,7 @@
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal::timer {
+namespace mframe::hal::timer {
   struct EventCancel;
 }
 
@@ -27,9 +27,9 @@ namespace hal::timer {
 
 /**
  * @brief 硬體計時器停止事件 <Interface>
- * 
+ *
  */
-struct hal::timer::EventCancel : public virtual lang::Interface {
+struct mframe::hal::timer::EventCancel : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

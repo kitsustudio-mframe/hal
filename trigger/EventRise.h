@@ -18,9 +18,9 @@
  * Namespace
  */
 
-namespace hal::trigger {
+namespace mframe::hal::trigger {
   struct EventRise;
-}  // namespace hal::trigger
+}  // namespace mframe::hal::trigger
 
 /* ****************************************************************************************
  * Class/Interface/Struct
@@ -28,9 +28,9 @@ namespace hal::trigger {
 
 /**
  * @brief 邊緣觸發正觸發事件 <Interface>
- * 
+ *
  */
-struct hal::trigger::EventRise : public virtual lang::Interface {
+struct mframe::hal::trigger::EventRise : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

@@ -19,7 +19,7 @@
  * Namespace
  */
 
-namespace hal {
+namespace mframe::hal {
   struct AnalogInputPin;
 }
 
@@ -29,9 +29,9 @@ namespace hal {
 
 /**
  * @brief 類比輸入訊號引腳硬體抽象層 <Interface>
- * 
+ *
  */
-struct hal::AnalogInputPin : public virtual lang::Interface {
+struct mframe::hal::AnalogInputPin : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

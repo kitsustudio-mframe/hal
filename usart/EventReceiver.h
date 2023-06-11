@@ -17,9 +17,9 @@
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal::usart {
+namespace mframe::hal::usart {
   struct EventReceiver;
-}  // namespace hal::usart
+}  // namespace mframe::hal::usart
 
 /* ****************************************************************************************
  * Class/Interface/Struct/Enum
@@ -29,7 +29,7 @@ namespace hal::usart {
  * @brief 同步非同步收發器接收事件 <Interface>
  *
  */
-struct hal::usart::EventReceiver : public virtual lang::Interface {
+struct mframe::hal::usart::EventReceiver : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

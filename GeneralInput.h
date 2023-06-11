@@ -12,12 +12,12 @@
  */
 
 //-----------------------------------------------------------------------------------------
-#include "lang/Interface.h"
+#include "./../lang/Interface.h"
 
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal {
+namespace mframe::hal {
   struct GeneralInput;
 }
 
@@ -29,7 +29,7 @@ namespace hal {
  * @brief 通用引腳輸入，硬體抽象層 <Interface>
  *
  */
-struct hal::GeneralInput : public virtual lang::Interface {
+struct mframe::hal::GeneralInput : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

@@ -20,7 +20,7 @@
  * Namespace
  */
 
-namespace hal {
+namespace mframe::hal {
   struct GeneralPin;
 }
 
@@ -32,8 +32,8 @@ namespace hal {
  * @brief 通用引腳輸入輸出，硬體抽象層 <Interface>
  *
  */
-struct hal::GeneralPin : public hal::GeneralOutput,
-                         public hal::GeneralInput {
+struct mframe::hal::GeneralPin : public mframe::hal::GeneralOutput,
+                                 public mframe::hal::GeneralInput {
   /* **************************************************************************************
    * Method
    */
@@ -41,33 +41,33 @@ struct hal::GeneralPin : public hal::GeneralOutput,
   /**
    * @brief 取得引腳工作模式。
    *
-   * @return @link hal::GeneralPinMode @endlink
+   * @return @link mframe::hal::GeneralPinMode @endlink
    *
    * - PUSH_PULL 推輓輸出
    * - PULL_UP 引腳上拉
    * - PULL_DOWN 引腳下拉
    * - OPEN_DRAIN 開路模式
    */
-  virtual hal::GeneralPinMode getPinMode(void) abstract;
+  virtual mframe::hal::GeneralPinMode getPinMode(void) abstract;
 
   /**
    * @brief 設定引腳工作模式：
    *
-   * @param mode @link hal::GeneralPinMode @endlink
+   * @param mode @link mframe::hal::GeneralPinMode @endlink
    *
    * - PUSH_PULL 推輓輸出。
    * - PULL_UP 引腳上拉。
    * - PULL_DOWN 引腳下拉。
    * - OPEN_DRAIN 開路模式。
    *
-   * @return hal::GeneralPinMode 返回設定模式：
+   * @return mframe::hal::GeneralPinMode 返回設定模式：
    *
    * - PUSH_PULL 推輓輸出。
    * - PULL_UP 引腳上拉。
    * - PULL_DOWN 引腳下拉。
    * - OPEN_DRAIN 開路模式。
    */
-  virtual hal::GeneralPinMode setPinMode(hal::GeneralPinMode mode) abstract;
+  virtual mframe::hal::GeneralPinMode setPinMode(mframe::hal::GeneralPinMode mode) abstract;
 
   /**
    * @brief 取得引腳的輸出輸入方向。
@@ -80,8 +80,8 @@ struct hal::GeneralPin : public hal::GeneralOutput,
   /**
    * @brief 設定引腳的輸出輸入方向。
    *
-   * @param dir 
-   * 
+   * @param dir
+   *
    * - true 設定為輸出。
    * - false = 設定為輸入。
    */

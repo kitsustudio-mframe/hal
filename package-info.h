@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2020 ZxyKira
  * All rights reserved.
- * 
+ *
  * SPDX-License-Identifier: MIT
  */
 #ifndef MFRAME_B6851305_CEEB_4401_A884_E477A8C12C60

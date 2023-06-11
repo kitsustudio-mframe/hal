@@ -17,7 +17,7 @@
 /* ****************************************************************************************
  * Namespace
  */
-namespace hal {
+namespace mframe::hal {
   struct GeneralOutput;
 }
 
@@ -27,9 +27,9 @@ namespace hal {
 
 /**
  * @brief 通用引腳輸出，硬體抽象層 <Interface>
- * 
+ *
  */
-struct hal::GeneralOutput : public virtual lang::Interface {
+struct mframe::hal::GeneralOutput : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */

@@ -18,7 +18,7 @@
  * Namespace
  */
 
-namespace hal {
+namespace mframe::hal {
   struct InterruptEvent;
 }
 
@@ -28,16 +28,16 @@ namespace hal {
 
 /**
  * @brief 硬體中斷觸發事件，硬體抽象層 <Interface>
- * 
+ *
  */
-struct hal::InterruptEvent : public virtual lang::Interface {
+struct mframe::hal::InterruptEvent : public virtual mframe::lang::Interface {
   /* **************************************************************************************
    * Method
    */
 
   /**
    * @brief 硬體中斷觸發事件
-   * 
+   *
    */
   virtual void interruptEvent(void) abstract;
 };

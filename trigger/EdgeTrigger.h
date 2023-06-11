@@ -20,7 +20,7 @@
  * Namespace
  */
 
-namespace hal::trigger {
+namespace mframe::hal::trigger {
   struct EdgeTrigger;
 }
 
@@ -30,9 +30,9 @@ namespace hal::trigger {
 
 /**
  * @brief 邊緣觸發硬體抽象層 <Interface>
- * 
+ *
  */
-struct hal::trigger::EdgeTrigger : public hal::Base {
+struct mframe::hal::trigger::EdgeTrigger : public mframe::hal::Base {
   /* **************************************************************************************
    * Method
    */
@@ -69,14 +69,14 @@ struct hal::trigger::EdgeTrigger : public hal::Base {
    *
    * @param event
    */
-  virtual void setEventRise(hal::trigger::EventRise* event) abstract;
+  virtual void setEventRise(mframe::hal::trigger::EventRise* event) abstract;
 
   /**
    * @brief Set the Event Fall object
    *
    * @param event
    */
-  virtual void setEventFall(hal::trigger::EventFall* event) abstract;
+  virtual void setEventFall(mframe::hal::trigger::EventFall* event) abstract;
 
   /**
    * @brief 讀取是否有發生正緣觸發
